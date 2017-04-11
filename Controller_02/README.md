@@ -21,4 +21,16 @@
             * Clazz.java 
             * Result.java 
         + controller.xml *说明了在各个action下的处理策略：登录成功时是转发还是跳转到哪个页面。* 
+         
+###### 执行过程
+按下登录按钮时，客户端向服务器发送uri: /Controller_02/login.scaction
+解析actionName为 login
+查找controller.xml文件中配置的classname为servlet.action.LoginAction
+
+通过xml中配置的路径servlet.action.LoginAction 找到class 
+得到这个class中的具体方法login
+将接收到的requeste，response对象传到login方法 由login方法处理
+
+
+
     
